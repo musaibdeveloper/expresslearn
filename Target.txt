@@ -1,0 +1,7 @@
+We are going to make 5 different routes. 
+
+1. Get users find all user.
+2. POST create a user.
+3. users/id--- find user details.
+4. DELETE /user/:id delete a user.
+5. Patch /user/:id update a user
