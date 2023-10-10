@@ -31,7 +31,8 @@ let users1 = [
 ];
 
 router.get("/allusers", (req, res) => {
-  res.send(users1)
+  res.send(users1);
+  res.status(200).json({ msg: "Successfully :)" })
 });
 
 
@@ -44,6 +45,19 @@ router.post("/adduser", (req,res)=> {
   res.send("Added the Users successfully :)")
 })
 
+router.get("/:id", (req, res) => {
+  const id = req.params;
+  res.send(id)
+});
+
+router.delete("/deleteallusers", (req, res) => {
+  res.status(200).json({msg : "Deleted"})
+})
+
+// Error Handling
+router.use("/", (req, res) => {
+  res.send("Invalid Route!")
+})
 
 
 //
